@@ -1,0 +1,41 @@
+{
+  "_metadata": {
+    "provider": "aws",
+    "version": "v6.28.0",
+    "generated_at": "2026-01-28T08:15:29.413220+00:00"
+  },
+  "resource_name": "aws_s3tables_table_bucket_policy",
+  "subcategory": "S3 Tables",
+  "arguments": {
+    "region": {
+      "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "resource_policy": {
+      "description": "Amazon Web Services resource-based policy document in JSON format.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "table_bucket_arn": {
+      "description": "ARN referencing the Table Bucket that owns this policy.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    }
+  }
+}

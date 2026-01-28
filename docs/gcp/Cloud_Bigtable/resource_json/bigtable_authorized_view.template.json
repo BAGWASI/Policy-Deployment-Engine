@@ -1,0 +1,131 @@
+{
+  "_metadata": {
+    "provider": "gcp",
+    "version": "v5.29.0",
+    "generated_at": "2026-01-28T07:59:06.296418+00:00"
+  },
+  "resource_name": "google_bigtable_authorized_view",
+  "subcategory": "Cloud Bigtable",
+  "arguments": {
+    "name": {
+      "description": "The name of the authorized view. Must be 1-50 characters and must only contain hyphens, underscores, periods, letters and numbers.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "project": {
+      "description": "The ID of the project in which the resource belongs. If it is not provided, the provider project is used.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "instance_name": {
+      "description": "The name of the Bigtable instance in which the authorized view belongs.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "table_name": {
+      "description": "The name of the Bigtable table in which the authorized view belongs.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "column_family": {
+      "description": "A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "deletion_protection": {
+      "description": "A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value. Note this field configs the deletion protection provided by the API in the backend, and should not be confused with Terraform-side deletion protection.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "subset_view": {
+      "description": "An AuthorizedView permitting access to an explicit subset of a Table. Structure is documented below. ----- `subset_view` supports the following arguments:",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "row_prefixes": {
+      "description": "A list of Base64-encoded row prefixes to be included in the authorized view. To provide access to all rows, include the empty string as a prefix (\"\").",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "family_subsets": {
+      "description": "A group of column family subsets to be included in the authorized view. This can be specified multiple times. Structure is documented below. ----- `family_subsets` supports the following arguments:",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "family_name": {
+      "description": "Name of the column family to be included in the authorized view. The specified column family must exist in the parent table of this authorized view.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "qualifiers": {
+      "description": "A list of Base64-encoded individual exact column qualifiers of the column family to be included in the authorized view.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "qualifier_prefixes": {
+      "description": "A list of Base64-encoded prefixes for qualifiers of the column family to be included in the authorized view. Every qualifier starting with one of these prefixes is included in the authorized view. To provide access to all qualifiers, include the empty string as a prefix (\"\").",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    }
+  }
+}

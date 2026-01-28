@@ -1,0 +1,103 @@
+{
+  "_metadata": {
+    "provider": "aws",
+    "version": "v6.28.0",
+    "generated_at": "2026-01-28T08:15:29.391515+00:00"
+  },
+  "resource_name": "aws_s3_directory_bucket",
+  "subcategory": "S3 (Simple Storage)",
+  "arguments": {
+    "region": {
+      "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "bucket": {
+      "description": "Name of the bucket. The name must be in the format `[bucket_name]--[azid]--x-s3`. Use the [`aws_s3_bucket`](s3_bucket.html) resource to manage general purpose buckets.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "data_redundancy": {
+      "description": "Data redundancy. Valid values: `SingleAvailabilityZone`, `SingleLocalZone`. The default value depends on the value of the `location.type` attribute.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "force_destroy": {
+      "description": "Boolean that indicates all objects should be deleted from the bucket *when the bucket is destroyed* so that the bucket can be destroyed without error. These objects are *not* recoverable. This only deletes objects when the bucket is destroyed, *not* when setting this parameter to `true`. Once this parameter is set to `true`, there must be a successful `terraform apply` run before a destroy is required to update this value in the resource state. Without a successful `terraform apply` after this parameter is set, this flag will have no effect. If setting this field in the same operation that would require replacing the bucket or destroying the bucket, this flag will not work. Additionally when importing a bucket, a successful `terraform apply` is required to set this value in state before it will take effect on a destroy operation.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "location": {
+      "description": "Bucket location. See [Location](#location) below for more details.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "name": {
+          "description": "[Availability Zone ID](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#az-ids) or Local Zone ID.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "location"
+        },
+        "type": {
+          "description": "Location type. Valid values: `AvailabilityZone`, `LocalZone`.",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "location"
+        }
+      }
+    },
+    "tags": {
+      "description": "Map of tags to assign to the bucket. If configured with a provider [`default_tags` configuration block](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "type": {
+      "description": "Bucket type. Valid values: `Directory`.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    }
+  }
+}

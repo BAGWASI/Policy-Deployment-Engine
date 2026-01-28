@@ -1,0 +1,40 @@
+{
+  "dry_run": false,
+  "provider": "gcp",
+  "version": "v5.29.0",
+  "generated_at": "2026-01-28T07:42:41.886024Z",
+  "resources": {
+    "AssuredWorkloads": [
+      "google_assured_workloads_workload"
+    ],
+    "Cloud Bigtable": [
+      "google_bigtable_authorized_view",
+      "google_bigtable_gc_policy",
+      "google_bigtable_instance",
+      "google_bigtable_table"
+    ],
+    "Cloud Deploy": [
+      "google_clouddeploy_delivery_pipeline",
+      "google_clouddeploy_target"
+    ],
+    "Cloud Functions (2nd gen)": [
+      "google_cloudfunctions2_function"
+    ],
+    "Dataplex": [
+      "google_dataplex_asset",
+      "google_dataplex_lake",
+      "google_dataplex_zone"
+    ],
+    "Cloud Endpoints": [
+      "google_endpoints_service"
+    ],
+    "Cloud Platform": [
+      "google_project_default_service_accounts",
+      "google_service_account_key"
+    ]
+  },
+  "statistics": {
+    "total_services": 7,
+    "total_resources": 14
+  }
+}

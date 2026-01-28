@@ -1,0 +1,99 @@
+{
+  "dry_run": false,
+  "provider": "gcp",
+  "version": "v5.29.0",
+  "generated_at": "2026-01-28T07:59:06.410463Z",
+  "resources": {
+    "Apikeys": [
+      "google_apikeys_key"
+    ],
+    "App Engine": [
+      "google_app_engine_application"
+    ],
+    "AssuredWorkloads": [
+      "google_assured_workloads_workload"
+    ],
+    "BigQuery Reservation": [
+      "google_bigquery_reservation_assignment"
+    ],
+    "BigQuery": [
+      "google_bigquery_table"
+    ],
+    "Cloud Bigtable": [
+      "google_bigtable_authorized_view",
+      "google_bigtable_gc_policy",
+      "google_bigtable_instance",
+      "google_bigtable_table"
+    ],
+    "Cloud Deploy": [
+      "google_clouddeploy_delivery_pipeline",
+      "google_clouddeploy_target"
+    ],
+    "Cloud Functions (2nd gen)": [
+      "google_cloudfunctions2_function"
+    ],
+    "Compute Engine": [
+      "google_compute_firewall_policy_rule",
+      "google_compute_network_firewall_policy_association",
+      "google_compute_network_firewall_policy_rule",
+      "google_compute_region_network_firewall_policy_association",
+      "google_compute_region_network_firewall_policy_rule",
+      "google_compute_shared_vpc_host_project",
+      "google_compute_shared_vpc_service_project",
+      "google_project_usage_export_bucket"
+    ],
+    "ContainerAws": [
+      "google_container_aws_cluster",
+      "google_container_aws_node_pool"
+    ],
+    "ContainerAzure": [
+      "google_container_azure_client",
+      "google_container_azure_cluster",
+      "google_container_azure_node_pool"
+    ],
+    "Container Registry": [
+      "google_container_registry"
+    ],
+    "Dataplex": [
+      "google_dataplex_asset",
+      "google_dataplex_lake",
+      "google_dataplex_zone"
+    ],
+    "Cloud Endpoints": [
+      "google_endpoints_service"
+    ],
+    "Eventarc": [
+      "google_eventarc_channel",
+      "google_eventarc_google_channel_config",
+      "google_eventarc_trigger"
+    ],
+    "Firebaserules": [
+      "google_firebaserules_release",
+      "google_firebaserules_ruleset"
+    ],
+    "Cloud Platform": [
+      "google_project_default_service_accounts",
+      "google_service_account_key"
+    ],
+    "NetworkConnectivity": [
+      "google_network_connectivity_hub",
+      "google_network_connectivity_spoke"
+    ],
+    "OrgPolicy": [
+      "google_org_policy_policy"
+    ],
+    "OS Config": [
+      "google_os_config_os_policy_assignment"
+    ],
+    "Certificate Authority Service": [
+      "google_privateca_certificate_template"
+    ],
+    "RecaptchaEnterprise": [
+      "google_recaptcha_enterprise_key"
+    ]
+  },
+  "statistics": {
+    "total_services": 22,
+    "total_resources": 43
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "_metadata": {
+    "provider": "aws",
+    "version": "v6.28.0",
+    "generated_at": "2026-01-28T08:15:29.375094+00:00"
+  },
+  "resource_name": "aws_s3_bucket_intelligent_tiering_configuration",
+  "subcategory": "S3 (Simple Storage)",
+  "arguments": {
+    "region": {
+      "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "bucket": {
+      "description": "Name of the bucket this intelligent tiering configuration is associated with.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "name": {
+      "description": "Unique name used to identify the S3 Intelligent-Tiering configuration for the bucket.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "status": {
+      "description": "Specifies the status of the configuration. Valid values: `Enabled`, `Disabled`.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "filter": {
+      "description": "Bucket filter. The configuration only includes objects that meet the filter's criteria (documented below).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "tiering": {
+      "description": "S3 Intelligent-Tiering storage class tiers of the configuration (documented below). The `filter` configuration supports the following:",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "prefix": {
+      "description": "Object key name prefix that identifies the subset of objects to which the configuration applies.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "tags": {
+      "description": "All of these tags must exist in the object's tag set in order for the configuration to apply. The `tiering` configuration supports the following:",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "access_tier": {
+      "description": "S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_ACCESS`, `DEEP_ARCHIVE_ACCESS`.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "days": {
+      "description": "Number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    }
+  }
+}

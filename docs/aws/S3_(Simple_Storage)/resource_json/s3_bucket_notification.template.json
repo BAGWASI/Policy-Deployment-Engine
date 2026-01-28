@@ -1,0 +1,227 @@
+{
+  "_metadata": {
+    "provider": "aws",
+    "version": "v6.28.0",
+    "generated_at": "2026-01-28T08:15:29.380628+00:00"
+  },
+  "resource_name": "aws_s3_bucket_notification",
+  "subcategory": "S3 (Simple Storage)",
+  "arguments": {
+    "bucket": {
+      "description": "Name of the bucket for notification configuration. The following arguments are optional:",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "region": {
+      "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "eventbridge": {
+      "description": "Whether to enable Amazon EventBridge notifications. Defaults to `false`.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "lambda_function": {
+      "description": "Used to configure notifications to a Lambda Function. See below.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "events": {
+          "description": "[Event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "lambda_function"
+        },
+        "filter_prefix": {
+          "description": "Object key name prefix.",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "lambda_function"
+        },
+        "filter_suffix": {
+          "description": "Object key name suffix.",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "lambda_function"
+        },
+        "id": {
+          "description": "Unique identifier for each of the notification configurations.",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "lambda_function"
+        },
+        "lambda_function_arn": {
+          "description": "Lambda function ARN.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "lambda_function"
+        }
+      }
+    },
+    "queue": {
+      "description": "Notification configuration to SQS Queue. See below.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "events": {
+          "description": "Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "queue"
+        },
+        "filter_prefix": {
+          "description": "Object key name prefix.",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "queue"
+        },
+        "filter_suffix": {
+          "description": "Object key name suffix.",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "queue"
+        },
+        "id": {
+          "description": "Unique identifier for each of the notification configurations.",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "queue"
+        },
+        "queue_arn": {
+          "description": "SQS queue ARN.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "queue"
+        }
+      }
+    },
+    "topic": {
+      "description": "Notification configuration to SNS Topic. See below.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "events": {
+          "description": "[Event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "topic"
+        },
+        "filter_prefix": {
+          "description": "Object key name prefix.",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "topic"
+        },
+        "filter_suffix": {
+          "description": "Object key name suffix.",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "topic"
+        },
+        "id": {
+          "description": "Unique identifier for each of the notification configurations.",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "topic"
+        },
+        "topic_arn": {
+          "description": "SNS topic ARN.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "topic"
+        }
+      }
+    }
+  }
+}

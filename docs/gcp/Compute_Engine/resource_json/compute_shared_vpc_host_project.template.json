@@ -1,0 +1,21 @@
+{
+  "_metadata": {
+    "provider": "gcp",
+    "version": "v5.29.0",
+    "generated_at": "2026-01-28T07:59:06.342815+00:00"
+  },
+  "resource_name": "google_compute_shared_vpc_host_project",
+  "subcategory": "Compute Engine",
+  "arguments": {
+    "project": {
+      "description": "The ID of the project that will serve as a Shared VPC host project",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    }
+  }
+}

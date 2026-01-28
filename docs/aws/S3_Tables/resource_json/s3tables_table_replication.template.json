@@ -1,0 +1,63 @@
+{
+  "_metadata": {
+    "provider": "aws",
+    "version": "v6.28.0",
+    "generated_at": "2026-01-28T08:15:29.416042+00:00"
+  },
+  "resource_name": "aws_s3tables_table_replication",
+  "subcategory": "S3 Tables",
+  "arguments": {
+    "region": {
+      "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "role": {
+      "description": "ARN referencing the IAM role assumed by S3 when replicating tables.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "rule": {
+      "description": "Replication rules. See [Rule](#rule) below for more details.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "destination": {
+          "description": "Replication destination. See [Destination](#destination) below for more details.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "rule"
+        }
+      }
+    },
+    "table_arn": {
+      "description": "ARN referencing the Table that owns this replication configuration.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    }
+  }
+}

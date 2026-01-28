@@ -1,0 +1,157 @@
+{
+  "_metadata": {
+    "provider": "aws",
+    "version": "v6.28.0",
+    "generated_at": "2026-01-28T08:15:29.410757+00:00"
+  },
+  "resource_name": "aws_s3tables_table",
+  "subcategory": "S3 Tables",
+  "arguments": {
+    "format": {
+      "description": "Format of the table. Must be `ICEBERG`.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "name": {
+      "description": "Name of the table. Must be between 1 and 255 characters in length. Can consist of lowercase letters, numbers, and underscores, and must begin and end with a lowercase letter or number. A full list of table naming rules can be found in the [S3 Tables documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-tables-buckets-naming.html#naming-rules-table).",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "namespace": {
+      "description": "Name of the namespace for this table. Must be between 1 and 255 characters in length. Can consist of lowercase letters, numbers, and underscores, and must begin and end with a lowercase letter or number.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "table_bucket_arn": {
+      "description": "ARN referencing the Table Bucket that contains this Namespace. The following arguments are optional:",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "encryption_configuration": {
+      "description": "A single table bucket encryption configuration object. [See `encryption_configuration` below](#encryption_configuration).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "kms_key_arn": {
+          "description": "The ARN of a KMS Key to be used with `aws:kms` `sse_algorithm`",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "encryption_configuration"
+        },
+        "sse_algorithm": {
+          "description": "One of `aws:kms` or `AES256`",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "encryption_configuration"
+        }
+      }
+    },
+    "maintenance_configuration": {
+      "description": "A single table bucket maintenance configuration object. [See `maintenance_configuration` below](#maintenance_configuration).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "iceberg_compaction": {
+          "description": "A single Iceberg compaction settings object. [See `iceberg_compaction` below](#iceberg_compaction).",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "maintenance_configuration"
+        },
+        "iceberg_snapshot_management": {
+          "description": "A single Iceberg snapshot management settings object. [See `iceberg_snapshot_management` below](#iceberg_snapshot_management).",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "maintenance_configuration"
+        }
+      }
+    },
+    "metadata": {
+      "description": "Contains details about the table metadata. This configuration specifies the metadata format and schema for the table. Currently only supports Iceberg format. [See `metadata` below](#metadata).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "iceberg": {
+          "description": "Contains details about the metadata for an Iceberg table. This block defines the schema structure for the Apache Iceberg table format. [See `iceberg` below](#iceberg).",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "metadata"
+        }
+      }
+    },
+    "region": {
+      "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "tags": {
+      "description": "Key-value map of resource tags. If configured with a provider [`default_tags` configuration block](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    }
+  }
+}

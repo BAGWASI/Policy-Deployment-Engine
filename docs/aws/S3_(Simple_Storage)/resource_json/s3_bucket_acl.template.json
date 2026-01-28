@@ -1,0 +1,83 @@
+{
+  "_metadata": {
+    "provider": "aws",
+    "version": "v6.28.0",
+    "generated_at": "2026-01-28T08:15:29.372363+00:00"
+  },
+  "resource_name": "aws_s3_bucket_acl",
+  "subcategory": "S3 (Simple Storage)",
+  "arguments": {
+    "region": {
+      "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "acl": {
+      "description": "Specifies the Canned ACL to apply to the bucket. Valid values: `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, `bucket-owner-full-control`, `log-delivery-write`. Full details are available on the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "access_control_policy": {
+      "description": "Configuration block that sets the ACL permissions for an object per grantee. [See below](#access_control_policy).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "grant": {
+          "description": "Set of `grant` configuration blocks. [See below](#grant).",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "access_control_policy"
+        },
+        "owner": {
+          "description": "Configuration block for the bucket owner's display name and ID. [See below](#owner).",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "access_control_policy"
+        }
+      }
+    },
+    "bucket": {
+      "description": "Bucket to which to apply the ACL.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "expected_bucket_owner": {
+      "description": "Account ID of the expected bucket owner.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    }
+  }
+}

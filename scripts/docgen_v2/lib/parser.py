@@ -224,8 +224,8 @@ def parse_argument_line(line: str) -> Optional[Tuple[str, bool, str, bool]]:
         >>> print(result)  # ('bucket', False, 'S3 bucket name', True)
     """
     # Pattern matches: * `argument_name` - (Required|Optional, flags...) Description text
-    # Captures: argument name, flags in parentheses, description
-    pattern = r'^\*\s+`([^`]+)`\s+-\s+\(([^)]+)\)\s+(.+)'
+    # New pattern supports both * and - and handles multiple (Flags)
+    pattern = r'^[\*-]\s+`([^`]+)`\s+-\s+(\(.+\))\s+(.+)'
     match = re.match(pattern, line.strip())
     
     if match:

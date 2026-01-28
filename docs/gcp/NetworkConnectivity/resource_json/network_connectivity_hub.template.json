@@ -1,0 +1,10 @@
+{
+  "_metadata": {
+    "provider": "gcp",
+    "version": "v5.29.0",
+    "generated_at": "2026-01-28T07:59:06.402975+00:00"
+  },
+  "resource_name": "google_network_connectivity_hub",
+  "subcategory": "NetworkConnectivity",
+  "arguments": {}
+}

@@ -1,0 +1,63 @@
+{
+  "_metadata": {
+    "provider": "aws",
+    "version": "v6.28.0",
+    "generated_at": "2026-01-28T08:15:29.378689+00:00"
+  },
+  "resource_name": "aws_s3_bucket_metadata_configuration",
+  "subcategory": "S3 (Simple Storage)",
+  "arguments": {
+    "bucket": {
+      "description": "General purpose bucket that you want to create the metadata configuration for.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "metadata_configuration": {
+      "description": "Metadata configuration. See [`metadata_configuration` Block](#metadata_configuration-block) for details. The following arguments are optional:",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "inventory_table_configuration": {
+          "description": "Inventory table configuration. See [`inventory_table_configuration` Block](#inventory_table_configuration-block) for details.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "metadata_configuration"
+        },
+        "journal_table_configuration": {
+          "description": "Journal table configuration. See [`journal_table_configuration` Block](#journal_table_configuration-block) for details.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "metadata_configuration"
+        }
+      }
+    },
+    "region": {
+      "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    }
+  }
+}

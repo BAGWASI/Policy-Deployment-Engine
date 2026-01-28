@@ -1,0 +1,41 @@
+{
+  "_metadata": {
+    "provider": "gcp",
+    "version": "v5.29.0",
+    "generated_at": "2026-01-28T07:59:06.349980+00:00"
+  },
+  "resource_name": "google_compute_shared_vpc_service_project",
+  "subcategory": "Compute Engine",
+  "arguments": {
+    "host_project": {
+      "description": "The ID of a host project to associate.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "service_project": {
+      "description": "The ID of the project that will serve as a Shared VPC service project.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "deletion_policy": {
+      "description": "The deletion policy for the shared VPC service. Setting ABANDON allows the resource to be abandoned rather than deleted. Possible values are: \"ABANDON\".",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    }
+  }
+}

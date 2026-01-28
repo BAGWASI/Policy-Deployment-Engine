@@ -1,0 +1,159 @@
+{
+  "_metadata": {
+    "provider": "aws",
+    "version": "v6.28.0",
+    "generated_at": "2026-01-28T08:15:29.390574+00:00"
+  },
+  "resource_name": "aws_s3_bucket_website_configuration",
+  "subcategory": "S3 (Simple Storage)",
+  "arguments": {
+    "region": {
+      "description": "Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "bucket": {
+      "description": "Name of the bucket.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "error_document": {
+      "description": "Name of the error document for the website. [See below](#error_document).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "key": {
+          "description": "Object key name to use when a 4XX class error occurs.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "error_document"
+        }
+      }
+    },
+    "expected_bucket_owner": {
+      "description": "Account ID of the expected bucket owner.",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    },
+    "index_document": {
+      "description": "Name of the index document for the website. [See below](#index_document).",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "suffix": {
+          "description": "Suffix that is appended to a request that is for a directory on the website endpoint. For example, if the suffix is `index.html` and you make a request to `samplebucket/images/`, the data that is returned will be for the object with the key name `images/index.html`. The suffix must not be empty and must not include a slash character.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "index_document"
+        }
+      }
+    },
+    "redirect_all_requests_to": {
+      "description": "Redirect behavior for every request to this bucket's website endpoint. [See below](#redirect_all_requests_to). Conflicts with `error_document`, `index_document`, and `routing_rule`.",
+      "required": true,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "host_name": {
+          "description": "Name of the host where requests are redirected.",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "redirect_all_requests_to"
+        },
+        "protocol": {
+          "description": "Protocol to use when redirecting requests. The default is the protocol that is used in the original request. Valid values: `http`, `https`.",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "redirect_all_requests_to"
+        }
+      }
+    },
+    "routing_rule": {
+      "description": "List of rules that define when a redirect is applied and the redirect behavior. [See below](#routing_rule).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null,
+      "arguments": {
+        "condition": {
+          "description": "Configuration block for describing a condition that must be met for the specified redirect to apply. [See below](#condition).",
+          "required": false,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "routing_rule"
+        },
+        "redirect": {
+          "description": "Configuration block for redirect information. [See below](#redirect).",
+          "required": true,
+          "deprecated": false,
+          "security_impact": null,
+          "rationale": null,
+          "compliant": null,
+          "non_compliant": null,
+          "parent": "routing_rule"
+        }
+      }
+    },
+    "routing_rules": {
+      "description": "JSON array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html) describing redirect behavior and when redirects are applied. Use this parameter when your routing rules contain empty String values (`\"\"`) as seen in the [example above](#with-routing_rules-configured).",
+      "required": false,
+      "deprecated": false,
+      "security_impact": null,
+      "rationale": null,
+      "compliant": null,
+      "non_compliant": null,
+      "parent": null
+    }
+  }
+}
