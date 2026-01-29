@@ -160,9 +160,14 @@ def extract_resource_name(content: str) -> Optional[str]:
         return match.group(1)
     
     # Pattern 2 (Azure/GCP): # azurerm_storage_account or # google_storage_bucket
-    pattern2 = r'^#\s+((?:azurerm|google|aws)_\S+)'
+    # Also handles escaped underscores like # google\_biglake\_catalog
+    pattern2 = r'^#\s+((?:azurerm|google|aws)(?:_|\\\_)\S+)'
     match = re.search(pattern2, content, re.MULTILINE)
-    return match.group(1) if match else None
+    if match:
+        # Remove backslash escapes from underscores (e.g., google\_storage\_bucket -> google_storage_bucket)
+        resource_name = match.group(1).replace('\\_', '_')
+        return resource_name
+    return None
 
 
 def extract_argument_section(content: str) -> Optional[str]:
