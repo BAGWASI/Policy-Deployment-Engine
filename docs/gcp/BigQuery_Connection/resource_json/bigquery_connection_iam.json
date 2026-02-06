@@ -51,7 +51,7 @@
       "description": "a `google_iam_policy` data source.",
       "required": true,
       "security_impact": false,
-      "rationale": "Does not have significant impact on resources security",
+      "rationale": "Does not have significant impact on resources security as it refers to the metadata",
       "compliant": null,
       "non-compliant": null,
       "parent": null

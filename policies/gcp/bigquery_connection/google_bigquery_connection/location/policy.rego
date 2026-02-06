@@ -1,5 +1,5 @@
 package terraform.gcp.security.bigquery_connection.google_bigquery_connection.location 
-import data.terraform.gcp.helpers
+import data.terraform.helpers
 import data.terraform.gcp.security.bigquery_connection.google_bigquery_connection.vars
 
 # STEP 2: CREATE SCENARIOS (can be simple (one condition) or complex (multiple linked conditions) )
@@ -10,7 +10,7 @@ conditions := [
     {
         "condition": "Check to see if connection is made from valid region",
         "attribute_path" : ["location"], # An array of strings and indicies eg. ["rsa",0,"key"]
-        "values" : ["AUSTRALIA-SOUTHEAST1", "AUSTRALIA-SOUTHEAST2"], # Values to compare against
+        "values" : ["australia-southeast1", "australia-southeast2"], # Values to compare against
         "policy_type" : "whitelist" # Policy type eg. 'whitelist', 'blacklist', 'range', 'pattern whitelist', 'pattern blacklist'
     }
     ]

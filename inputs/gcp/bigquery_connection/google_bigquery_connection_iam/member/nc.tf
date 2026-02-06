@@ -1,8 +1,7 @@
-resource "google_bigquery_connection" "nc" {
-   connection_id = ""
-   location      = "US"
-   friendly_name = "👋"
-   description   = "a riveting description"
-   cloud_resource {}
-   project = "pde_pro"
+resource "google_bigquery_connection_iam_member" "nc" {
+  project = "PDE"
+  location = "australia-southeast1"
+  connection_id = "connection_id"
+  role = "roles/bigquery.connectionUser"
+  member = "allUsers"
 }
