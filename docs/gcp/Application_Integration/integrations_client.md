@@ -6,12 +6,8 @@ Reference: [Terraform Registry – integrations_client](https://registry.terrafo
 
 ---
 
-<<<<<<< HEAD
-## Argument Reference
-=======
 ## Argument Reference  
 
->>>>>>> adb37771e6115cf245acea8e1ef3ee825f933af1
 | Argument | Description | Required | Security Impact | Rationale | Compliant | Non-Compliant |
 |----------|-------------|----------|-----------------|-----------|-----------|---------------|
 | `location` | Location in which client needs to be provisioned. | true | true | Enforcing location restrictions to Australian regions helps maintain data compliance and reduces the risk of unauthorized data access. | australia-southeast1 | us-east1 |
@@ -21,10 +17,7 @@ Reference: [Terraform Registry – integrations_client](https://registry.terrafo
 | `project` | If it is not provided, the provider project is used. | false | false | None | None | None |
 
 ### cloud_kms_config Block
-<<<<<<< HEAD
-=======
 
->>>>>>> adb37771e6115cf245acea8e1ef3ee825f933af1
 | Argument | Description | Required | Security Impact | Rationale | Compliant | Non-Compliant |
 |----------|-------------|----------|-----------------|-----------|-----------|---------------|
 | `kms_location` | Location name of the key ring | true | true | Enforcing Cloud KMS keys to reside in Australian regions ensures data residency compliance and minimizes exposure risks. | australia-southeast1 | us-central1 |
